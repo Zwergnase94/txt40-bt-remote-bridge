@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 320" width="100%" height="100%">
+  <rect width="860" height="320" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Left Panel: TXT 4.0 GUI Screenshot -->
+  <g transform="translate(30, 25)">
+    <text x="130" y="18" fill="#f0f6fc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">
+      TXT 4.0 Display: Omniwheel 1-Stick App
+    </text>
+    <rect x="10" y="30" width="240" height="240" rx="10" fill="#0a0e14" stroke="#58a6ff" stroke-width="2"/>
+
+    <!-- Top bar -->
+    <rect x="18" y="36" width="224" height="24" rx="4" fill="#121a24" stroke="#1c2b3d" stroke-width="1"/>
+    <text x="130" y="52" fill="#00e5ff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">
+      BT Verbunden | 8-Wege (Kanal 1)
+    </text>
+
+    <!-- Direction bar -->
+    <rect x="18" y="63" width="224" height="22" rx="4" fill="#0e151f" stroke="#192638" stroke-width="1"/>
+    <text x="130" y="78" fill="#ffcc00" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">
+      VORNE-LINKS (88% | v=448)
+    </text>
+
+    <!-- Compass Canvas -->
+    <rect x="70" y="90" width="120" height="120" rx="6" fill="#070b10"/>
+    <circle cx="130" cy="150" r="52" fill="none" stroke="#1b2a3d" stroke-width="1.5"/>
+    <circle cx="130" cy="150" r="26" fill="none" stroke="#1b2a3d" stroke-width="1"/>
+    <line x1="130" y1="98" x2="130" y2="202" stroke="#162232" stroke-width="1"/>
+    <line x1="78" y1="150" x2="182" y2="150" stroke="#162232" stroke-width="1"/>
+    <line x1="93" y1="113" x2="167" y2="187" stroke="#162232" stroke-width="1"/>
+    <line x1="93" y1="187" x2="167" y2="113" stroke="#162232" stroke-width="1"/>
+
+    <text x="130" y="109" fill="#8fa5bf" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">V</text>
+    <text x="130" y="199" fill="#8fa5bf" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">H</text>
+    <text x="85" y="153" fill="#8fa5bf" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">L</text>
+    <text x="175" y="153" fill="#8fa5bf" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">R</text>
+
+    <!-- Active Diagonal Vector (VORNE-LINKS) -->
+    <line x1="130" y1="150" x2="98" y2="118" stroke="#ffcc00" stroke-width="3"/>
+    <circle cx="98" cy="118" r="5.5" fill="#ff3366" stroke="#ffffff" stroke-width="1"/>
+
+    <!-- Bottom Buttons -->
+    <rect x="18" y="216" width="110" height="40" rx="5" fill="#1f6feb"/>
+    <text x="73" y="240" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Modus: 8-Wege</text>
+
+    <rect x="134" y="216" width="108" height="40" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+    <text x="188" y="240" fill="#f0f6fc" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Beenden</text>
+  </g>
+
+  <!-- Right Panel: Live Terminal Output -->
+  <g transform="translate(305, 25)">
+    <text x="260" y="18" fill="#f0f6fc" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">
+      Live-Diagnose (ESP32 Serieller Monitor &amp; TXT 4.0 I²C-Ausgabe)
+    </text>
+    <rect x="0" y="30" width="525" height="240" rx="10" fill="#090d13" stroke="#30363d" stroke-width="2"/>
+
+    <!-- Terminal Window Dots -->
+    <circle cx="18" cy="46" r="5" fill="#ff5f56"/>
+    <circle cx="34" cy="46" r="5" fill="#ffbd2e"/>
+    <circle cx="50" cy="46" r="5" fill="#27c93f"/>
+    <text x="262" y="50" fill="#8b949e" font-family="monospace" font-size="10" text-anchor="middle">ft@txt40: /opt/ft/workspaces/omni_bt_remote</text>
+
+    <text x="16" y="78" fill="#7ee787" font-family="monospace" font-size="10.5">=== fischertechnik BT Control Bridge (ESP32 -&gt; TXT 4.0 I2C) ===</text>
+    <text x="16" y="95" fill="#8b949e" font-family="monospace" font-size="10.5">I2C-Slave bereit auf Adresse 0x42 (SDA=GPIO21, SCL=GPIO22)</text>
+    <text x="16" y="112" fill="#8b949e" font-family="monospace" font-size="10.5">Handles: Batt=0x0018, CommCh=0x001D, Alert=0x0020</text>
+    <text x="16" y="129" fill="#8b949e" font-family="monospace" font-size="10.5">Output M1..M4 Handles = 0x0024, 0x0026, 0x0028, 0x002A</text>
+    <text x="16" y="146" fill="#58a6ff" font-family="monospace" font-size="10.5">[BLE] Verbunden mit 10:45:f8:c4:d8:ac</text>
+    <text x="16" y="168" fill="#ffa657" font-family="monospace" font-size="10.5">[8-Wege] Links(X=   0%, Y= +92%) -&gt; VORNE        | Speed=471/512</text>
+    <text x="16" y="185" fill="#ffa657" font-family="monospace" font-size="10.5">[8-Wege] Links(X= -64%, Y= +61%) -&gt; VORNE-LINKS  | Speed=448/512</text>
+    <text x="16" y="202" fill="#ffa657" font-family="monospace" font-size="10.5">[8-Wege] Links(X= -98%, Y=  +5%) -&gt; LINKS        | Speed=502/512</text>
+    <text x="16" y="219" fill="#ffa657" font-family="monospace" font-size="10.5">[8-Wege] Links(X= +72%, Y= -69%) -&gt; HINTEN-RECHTS| Speed=510/512</text>
+    <text x="16" y="236" fill="#d2a8ff" font-family="monospace" font-size="10.5">[360°]   Links(X= +35%, Y= +80%) -&gt; VORNE-RECHTS | Speed=446/512</text>
+    <text x="16" y="253" fill="#7ee787" font-family="monospace" font-size="10.5">[8-Wege] Links(X=   0%, Y=   0%) -&gt; STOP         | Speed=  0/512</text>
+  </g>
+</svg>

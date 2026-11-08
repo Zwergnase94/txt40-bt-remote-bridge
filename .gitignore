@@ -1,0 +1,10 @@
+# Arduino build artifacts
+esp32_ft_bt_remote_bridge/build/
+*.bin
+*.elf
+*.map
+
+# Python cache
+__pycache__/
+*.py[cod]
+.DS_Store
