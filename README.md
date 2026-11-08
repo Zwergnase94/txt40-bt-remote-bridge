@@ -26,7 +26,7 @@ Für den älteren fischertechnik TXT Controller (und die Community-Firmware *ftc
 3. **Fest codierte BLE GATT-Handles in der Fernbedienung:**
    Während die Smartphone-App über die 128-Bit-GATT-UUIDs kommuniziert, sucht die physische blaue Fernbedienung nach dem Verbinden **nicht** dynamisch nach UUIDs, sondern schreibt die 4 Joystick-Achsen direkt (`Write Without Response`) auf die fest in der Fernbedienung hinterlegten GATT-Attribute-Handles **`0x0024`**, **`0x0026`**, **`0x0028`** und **`0x002A`** (sowie **`0x001D`** für die Kanalwahl).
 
-### Unsere Lösung: Ein ESP32 als transparente BLE-zu-I²C-Brücke (`0x42`)
+### Lösung: Ein ESP32 als transparente BLE-zu-I²C-Brücke (`0x42`)
 Ein kostengünstiger **ESP32** (~5 €) übernimmt die gesamte Bluetooth-Kommunikation mit der Fernbedienung bzw. der Handy-App:
 - Er setzt seine eigene BLE-MAC-Adresse per Software auf `10:45:F8:11:22:32`.
 - Über den schlanken **`NimBLE-Arduino`**-Stack stellt er sowohl sämtliche 128-Bit-GATT-UUIDs (für die **Smartphone-App**) als auch die **exakten Attribute-Handles (`0x0018`, `0x001D`, `0x0020`, `0x0024`–`0x002A`)** (für die **blaue Fernbedienung**) bereit. *(Hinweis: Der Standard-Bluedroid-Stack des ESP32 belegt intern bereits die Handles `0x0001..0x0027` und funktioniert deshalb nicht mit der physischen Fernbedienung – `NimBLE` belegt nur `0x0001..0x000B` und ermöglicht so das exakte Handle-Alignment).*
